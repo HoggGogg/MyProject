@@ -11,17 +11,7 @@ const App: React.FC = () => {
     const [desiredStats, setDesiredStats] = useState<Record<string, number> | null>(null);
     const [modalOpen, setModalOpen] = useState(false);
 
-    const handleStatsSubmit = (stats: Record<string, number>) => {
-        setCurrentStats(stats);
-        setModalOpen(true);
-    };
-
     const [recommendOpen, setRecommendOpen] = useState(false);
-
-    const handleDesiredSubmit = (stats: Record<string, number>) => {
-        setDesiredStats(stats);
-        setRecommendOpen(true);
-    };
 
     <RecommendationModal
         current={currentStats!}
@@ -30,11 +20,21 @@ const App: React.FC = () => {
         onClose={() => setRecommendOpen(false)}
     />
 
+    const handleDesiredSubmit = (stats: Record<string, number>) => {
+        setDesiredStats(stats);
+        setRecommendOpen(true);
+    };
+
+    const handleStatsSubmit = (stats: Record<string, number>) => {
+        setCurrentStats(stats);
+        setModalOpen(true);
+    };
+
     return (
         <div className="app-bg">
             <Header />
             <main>
-                <StatsForm onSubmit={handleStatsSubmit} />
+                <StatsForm onSubmit={handleStatsSubmit}/>
                 <DesiredStatsModal
                     isOpen={modalOpen}
                     onClose={() => setModalOpen(false)}
