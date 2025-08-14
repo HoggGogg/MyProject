@@ -10,6 +10,7 @@ interface Stats {
     resonansSkillBonus: number;
     resonansLiberationBonus: number;
     heavyAttackBonus: number;
+    [key: string]: number;
 }
 
 interface Props {
