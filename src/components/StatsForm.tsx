@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, {useState} from "react";
 
 interface Stats {
     hp: number;
@@ -12,11 +12,11 @@ interface Stats {
     heavyAttackBonus: number;
 }
 
-export interface Props {
-    onSubmit: (stats: Stats) => void;
+interface Props {
+    onSubmit: (stats: Record<string, number>) => void
 }
 
-const StatsForm: React.FC<Props> = ({ onSubmit }) => {
+const StatsForm: React.FC<Props> = ({onSubmit}) => {
     const [stats, setStats] = useState<Stats>({
         hp: 0,
         critRate: 0,
@@ -30,7 +30,7 @@ const StatsForm: React.FC<Props> = ({ onSubmit }) => {
     });
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-        setStats({ ...stats, [e.target.name]: Number(e.target.value) });
+        setStats({...stats, [e.target.name]: Number(e.target.value)});
     };
 
     const handleSubmit = (e: React.FormEvent) => {
