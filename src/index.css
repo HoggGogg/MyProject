@@ -1,0 +1,120 @@
+body, html, #root {
+    height: 100%;
+    margin: 0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+.app-bg {
+    min-height: 100vh;
+    background: url('/bg.jpg') center/cover no-repeat fixed;
+    backdrop-filter: blur(4px);
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.ww-header {
+    background: rgba(30, 34, 54, 0.85);
+    color: #e0e6f6;
+    padding: 2rem 0 1rem 0;
+    text-align: center;
+    font-family: 'Cinzel', serif;
+    font-size: 2rem;
+    letter-spacing: 2px;
+    box-shadow: 0 2px 8px #0004;
+}
+
+.ww-footer {
+    background: rgba(30, 34, 54, 0.85);
+    color: #e0e6f6;
+    text-align: center;
+    padding: 1rem 0;
+    font-size: 1rem;
+    box-shadow: 0 -2px 8px #0004;
+}
+
+.stats-form, .modal-content form {
+    background: rgba(255,255,255,0.85);
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 4px 24px #0002;
+    margin: 2rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+}
+
+input[type="number"] {
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    border: 1px solid #aaa;
+    font-size: 1rem;
+}
+
+button {
+    background: #3b4a6b;
+    color: #fff;
+    border: none;
+    border-radius: 0.5rem;
+    padding: 0.7rem 1.5rem;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 1rem;
+    transition: background 0.2s;
+}
+button:hover {
+    background: #5a6fae;
+}
+
+.modal-overlay {
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(30,34,54,0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background: rgba(255,255,255,0.97);
+    border-radius: 1rem;
+    padding: 2rem;
+    box-shadow: 0 8px 32px #0006;
+    position: relative;
+}
+
+.close-btn {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: #e74c3c;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 2rem;
+    height: 2rem;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.result {
+    background: rgba(255,255,255,0.85);
+    border-radius: 1rem;
+    padding: 1.5rem;
+    margin: 2rem 0;
+    box-shadow: 0 4px 24px #0002;
+}
