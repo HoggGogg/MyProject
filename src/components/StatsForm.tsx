@@ -13,7 +13,7 @@ interface Stats {
 }
 
 interface Props {
-    onSubmit: (Stats: Record<string, number>) => void
+    onSubmit: (stats: Record<string, number>) => void
 }
 
 const StatsForm: React.FC<Props> = ({onSubmit}) => {
