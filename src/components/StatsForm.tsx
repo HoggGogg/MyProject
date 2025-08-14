@@ -12,7 +12,7 @@ interface Stats {
     heavyAttackBonus: number;
 }
 
-interface Props {
+export interface Props {
     onSubmit: (stats: Stats) => void;
 }
 
